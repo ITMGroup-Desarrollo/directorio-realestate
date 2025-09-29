@@ -65,7 +65,7 @@ export default function QrGenerator() {
   };
 
   const generateQRFor = (persona) => {
-    const url = `https://itmgroup.mx/directorio/${persona.id}/`;
+    const url = `https://www.itmdesarrolladores.com/directorio/${persona.id}/`;
     if (qrInstance) {
       qrInstance.update({ data: url });
       const qrContainer = document.getElementById("styled-qr");
@@ -141,14 +141,14 @@ const handleGoogleWallet = () => {
   if (!selectedPersona) return;
   const url = `https://backend-python-test.onrender.com/google-pass?persona=${selectedPersona.id}&nombre=${encodeURIComponent(
     selectedPersona.nombre + " " + selectedPersona.apellido
-  )}&cargo=${encodeURIComponent(selectedPersona.puesto)}`;
+  )}&cargo=${encodeURIComponent(selectedPersona.puesto)}&realestate=truenpm `;
   window.open(url, "_blank"); 
 };
 const handleAppleWallet = () => {
   if (!selectedPersona) return;
   const url = `https://backend-python-test.onrender.com/apple-pass?persona=${selectedPersona.id}&nombre=${encodeURIComponent(
     selectedPersona.nombre + " " + selectedPersona.apellido
-  )}&cargo=${encodeURIComponent(selectedPersona.puesto)}`;
+  )}&cargo=${encodeURIComponent(selectedPersona.puesto)}&realestate=true`;
   window.open(url, "_blank"); 
 };
 
