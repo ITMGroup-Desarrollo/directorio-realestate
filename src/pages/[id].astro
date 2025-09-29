@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/layout.astro"
+import Home from "../components/home.astro"
+import { data } from "../data/personas"
+
+const { id } = Astro.params;
+
+// Verificar si el ID es numérico (ID real)
+const isRealId = !isNaN(Number(id)) && data.some(p => p.id === id);
+
+if (!isRealId) {
+  // Si no es un ID real, redirigir a una página de error o 404
+  throw new Error("No se encontró la persona");
+}
+
+const persona = data.find(p => p.id === id);
+
+export async function getStaticPaths() {
+  return data.map(p => ({
+    params: { id: p.id }
+  }));
+}
+---
+
+<Layout>
+  <Home persona={persona} />
+  
+  <!-- Script que se ejecuta solo en el cliente -->
+  <script is:inline>
+    // Verificar si la URL contiene un número (ID real)
+    const path = window.location.pathname.split('/').filter(Boolean).pop();
+    const isNumericPath = !isNaN(path);
+
+    if (isNumericPath) {
+      // Generar un ID aleatorio que no sea un número entre 1-500
+      let randomId;
+      do {
+        randomId = Math.floor(Math.random() * 90000) + 10000; // Número de 5 dígitos
+      } while (randomId >= 1 && randomId <= 500);
+
+      // Cambiar la URL sin recargar la página
+      window.history.replaceState({}, "", `/${randomId}`);
+    }
+  </script>
+</Layout>

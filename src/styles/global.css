@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+.bg-container {
+  background-image: url('../assets/fondo.svg'); 
+  background-size: cover;
+  background-position: center;
+}
+.image-container {
+  background-image: url('../assets/foto.svg'); 
+  background-size: cover;
+  background-position: center;
+}
+:root{
+  --primary-color: #10759b;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+.job{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: .86rem !important;
+  margin-top: -0.5rem !important;
+}
+.input-search{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem !important;
+}
+.name{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem !important;
+}
+.poppins{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+.full-name{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem !important;
+}
+.item{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: .6rem !important;
+}
+.horizontal{
+  margin-top: -1rem;
+}
+.gen-container{
+  background-image: url('../assets/fondo-gen.png');
+  background-size: cover;
+}
+.opacity-container{
+  background-image: url('../assets/opacidad.svg');
+  background-size: cover;
+}
+.logo-qr{
+  max-height: 48px !important;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+.button-container p{
+  font-size: 0.6rem;
+}
+@media (min-width: 768px) and (max-height: 768px) {
+  .second-container{
+    margin-top: -3rem;
+  }
+  .name{
+    font-size: 2rem !important;
+  }
+  .job{
+    font-size: 1.2rem !important;
+  }
+  .item{
+    font-size: 1rem !important;
+  }
+  .logo{
+    width: 9rem !important;
+    height: 9rem !important;
+  }
+  .persona{
+    width: 16rem !important;
+    height: 18rem !important;
+    margin-top: 1.5rem;
+  }
+  .item-image{
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    
+  }
+  .image-container{
+    height: 50% !important;
+  }
+  .fotoFondo{
+    height: 100% !important;
+  }
+  .icons-container span{
+    display: block;
+    height: 5rem;
+  }
+  .plantilla-container{
+    margin-top: 4rem  !important;
+    height: auto !important;
+  }
+  .image-container{
+    height: 50% !important;
+  }
+  .logo{
+    margin-top: 0rem !important;
+  }
+}
+@Media (min-width: 768px) and (min-height: 768px){
+  
+  .name{
+    font-size: 4rem !important;
+  }
+  .job{
+    font-size: 2rem !important;
+  }
+  .item{
+    font-size: 1.5rem !important;
+  }
+  .horizontal{
+    margin-top: -2rem;
+  }
+  .persona{
+    margin-top: 1rem;
+    width: 24rem !important;
+    height: 28rem !important;
+  }
+  .icons-container span{
+    display: block;
+    height: 7rem;
+  }
+  .fotoFondo{
+    height: 100% !important;
+  }
+  .image-container{
+    height: 50% !important;
+  }
+  .plantilla-container{
+    margin-top: 8rem  !important;
+    height: 100% !important;
+  }
+  .second-container{
+    margin-top: -1rem !important;
+  }
+  .poppins{
+    margin-top: 1rem !important;  
+  }
+  .logo{
+    margin-top: 2.5rem !important;
+  }
+}
