@@ -141,7 +141,7 @@ const handleGoogleWallet = () => {
   if (!selectedPersona) return;
   const url = `https://backend-python-test.onrender.com/google-pass?persona=${selectedPersona.id}&nombre=${encodeURIComponent(
     selectedPersona.nombre + " " + selectedPersona.apellido
-  )}&cargo=${encodeURIComponent(selectedPersona.puesto)}&realestate=truenpm `;
+  )}&cargo=${encodeURIComponent(selectedPersona.puesto)}&realestate=true`;
   window.open(url, "_blank"); 
 };
 const handleAppleWallet = () => {
